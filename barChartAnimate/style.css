@@ -16,10 +16,6 @@
     font-size: 11px;
 }
 
-.MyRect {
-    fill: steelblue;
-}
-
 .MyText {
     fill: white;
     text-anchor: middle;
