@@ -46,7 +46,7 @@ var rects = svg.selectAll(".MyRect")
     .attr("width", xScale.rangeBand() - rectPadding)
 
     .attr("fill", "steelblue")
-    // 监听事件要放在y的动画之前
+    // 监听事件要放在y的生长动画之前
     .on("mouseover",function(d,i){
         d3.select(this)
             .attr("fill","yellow");
