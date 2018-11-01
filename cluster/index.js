@@ -1,5 +1,6 @@
 //读取json数据文件
 
+//如果要画树图，就将所有用到cluster替换成tree就好了
 d3.json("./mock.json", function (error, root) {
     //读取到的json数据是保存在root中的
     var nodes = cluster.nodes(root)
@@ -56,7 +57,7 @@ var cluster = d3.layout.cluster()
 
 //绘制
 var diagonal = d3.svg.diagonal()
-    //projection: 点变换器，交换的x，y坐标，这里用在link的布局上。否则画出来的图是根结点在上，向下伸展的。
+    //projection: 交换连线的x，y坐标，否则画出来的图是根结点在上，向下伸展的。
     .projection(function (d) { return [d.y, d.x] })
 
 
